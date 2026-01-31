@@ -19,16 +19,9 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { ExternalLink, Github } from "lucide-react";
+import type { Project } from "@/lib/data";
 
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  techStack: string[];
-  link?: string;
-  github?: string;
-  thumbnail?: string;
-}
+export type { Project };
 
 interface ProjectCardProps {
   project: Project;

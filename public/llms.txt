@@ -1,0 +1,27 @@
+# 이 파일에 대해
+
+이 포트폴리오 사이트는 API를 통해 개발자 정보를 제공합니다.
+웹사이트를 방문하지 않아도 API로 프로필과 포트폴리오를 조회할 수 있습니다.
+
+## API 엔드포인트
+
+- GET /api/profile - 개발자 프로필 (이름, 소개, 기술 스택, 연락처)
+- GET /api/projects - 포트폴리오 프로젝트 목록
+- GET /api/developer - 프로필 + 프로젝트 통합 응답
+- GET /api/developer/context - AI/LLM용 텍스트 컨텍스트 (Accept: text/plain)
+
+## 사용 예시
+
+```bash
+# 프로필 조회
+curl https://your-domain.com/api/profile
+
+# 프로젝트 목록
+curl https://your-domain.com/api/projects
+
+# 전체 개발자 정보 (AI 봇용)
+curl https://your-domain.com/api/developer
+
+# 텍스트 컨텍스트 (AI가 질문에 답할 때 참조)
+curl -H "Accept: text/plain" https://your-domain.com/api/developer/context
+```
